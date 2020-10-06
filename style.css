@@ -1,0 +1,107 @@
+.css-selector {
+    font-family: "Bangers", cursive, sans-serif;
+}
+body {
+    background-color: black;
+    text-align: center;
+    font-family: "Bangers", cursive, sans-serif;
+    color: goldenrod;
+} 
+h1 {
+    background-color: black;
+    margin: 0, 200px;
+}
+div {
+    background-color: gold;
+    margin: 100px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-evenly;
+    border-radius: 45%;
+
+
+}
+.red {
+    background-color: red;
+    display: inline-block;
+    background-color: #DC143C;
+    border: none;
+    color: #FFFFF0;
+    text-inline: center;
+    text-decoration: none;
+    outline: none;
+    margin: 0px 75px 0px 0px;
+    padding: 15px 25px;
+    font-size: 24px;
+    border: 5px solid #555555;
+    border-radius: 40%;
+    animation-name: test;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+    
+
+    
+}
+.blue {
+    background-color: blue;
+    display: inline-block;
+    border: none;
+    color: #FFFFF0;
+    text-inline: center;
+    text-decoration: none;
+    outline: none;
+    margin: 0px 75px 0px 0px;
+    padding: 15px 25px;
+    font-size: 24px;
+    border: 5px solid #555555;
+    border-radius: 40%;
+    animation-name: test;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+    
+}
+    
+.green {
+    background-color: green;
+    display: inline-block;
+    border: none;
+    color: #FFFFF0;
+    text-inline: center;
+    text-decoration: none;
+    outline: none;
+    margin: 0px 75px 0px 0px;
+    padding: 15px 25px;
+    font-size: 24px;
+    border: 5px solid #555555;
+    border-radius: 40%;
+    animation-name: test;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+.yellow {
+    background-color: yellow;
+    display: inline-block;
+    border: none;
+    color: #FFFFF0;
+    text-inline: center;
+    text-decoration: none;
+    outline: none;
+    margin: 0px 75px 0px 0px;
+    padding: 15px 25px;
+    font-size: 24px;
+    border: 5px solid #555555;
+    border-radius: 40%;
+    animation-name: test;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+}
