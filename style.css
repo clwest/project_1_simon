@@ -12,6 +12,7 @@ header {
 }
 h1 {
     margin: 0;
+    text-align: center;
 }
 main {
     display: flex;
@@ -109,7 +110,7 @@ main {
     grid-column: 1 / span 1;
     cursor: none;
   }
-#high-box {
+/*#high-box {
     grid-row: 1 / span 1;
     grid-column: 2 / span 1;
     text-align: center;
@@ -131,6 +132,7 @@ main {
     grid-column: 1 / span -2;
     cursor: none;
 }
+*/
 #game-board {
     background: black;
     grid-row: 1 / span 1;
