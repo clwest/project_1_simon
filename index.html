@@ -8,18 +8,51 @@
     <script src="./app.js" defer></script>
     <title>Simon Game</title>
 </head>
-<body>
-<div class="container">
-    <h1>Welcome to the Simon Game</h1>
-<nav>
-    <div>Start Here</div>
-    <div>
-        <button class = "red">Red</button>
-        <button class = "blue">Blue</button>
-        <button class = "green">Green</button>
-        <button class = "yellow">Yellow</button>
-    </div>
-</nav>  
-</div>  
+<style>
+</style>
+<body>     
+    <main>
+        <div id="Game Window">
+            <div id="top">
+                <div id="grid-top">
+                    <div id="score-box">
+                        <div id="score-grid">
+                        <div id="score-total">      
+                            <p>ScoreBoard</p>
+                        </div>  
+                        <div id="score-counter">
+                            <p id="score-number">0</p>
+                            </div>
+                    <div id ="high-box">
+                    </div>
+                        <div id="high-gird">
+                        </div>
+                    <div id="high-score">
+                        <p>High Score</p>
+                    </div>
+                </div>
+            </div>
+        
+        
+        <div id = "game-grid"> 
+            <div class="game-div" id="green"> 
+        </div>
+            <div class="game-div" id="red">
+            </div>
+        <div id="simon">
+                <p id=simon-color>SIMON</p>
+            </div>
+            <div class="game-div" id="yellow">               
+            </div>
+            <div class="game-div" id="blue"></div>
+        </div>
+        <footer>
+            <h1>Welcome to the Simon Game</h1>
+        <button id="start">Click here to begin</button>
+        </footer>
+    </main>
+
+
+  
 </body>
 </html>

@@ -1,107 +1,262 @@
-.css-selector {
-    font-family: "Bangers", cursive, sans-serif;
-}
+
 body {
-    background-color: black;
-    text-align: center;
     font-family: "Bangers", cursive, sans-serif;
-    color: goldenrod;
-} 
-h1 {
+    text-align: center;
+    font-weight: bolder;
     background-color: black;
-    margin: 0, 200px;
 }
-div {
-    background-color: gold;
-    margin: 100px;
+header {
+    text-align: center;
+    font-size: 20px;
+    color: goldenrod;
+}
+h1 {
+    margin: 0;
+}
+main {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-evenly;
-    border-radius: 45%;
+    justify-content: center;
+}
 
+#start {
+    font-family: "Bangers", cursive, sans-serif;
+    margin: 0 auto;
+    border: none;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: inline;
+    font-size: 24px;
+    border: 5px solid #555555;
+    border-radius: 40%;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+    animation-name: startButtonColor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
 
 }
-.red {
-    background-color: red;
-    display: inline-block;
-    background-color: #DC143C;
-    border: none;
-    color: #FFFFF0;
-    text-inline: center;
-    text-decoration: none;
-    outline: none;
-    margin: 0px 75px 0px 0px;
-    padding: 15px 25px;
-    font-size: 24px;
-    border: 5px solid #555555;
-    border-radius: 40%;
-    animation-name: test;
-    animation-duration: 4s;
-    animation-iteration-count: 5;
-    cursor: pointer;
-    box-shadow: 0 9px #999;
-    
+@keyframes startButtonColor {
+    0% {
+        background: rbga(62, 221, 75, 0.8);
+    }
+    25% {
+        background:  rgba(221, 75, 62, 0.8);
+    }
+    50% {
+        background: rgba(255, 234, 55, 0.8);
+    }
+    100% {
+        background: rgba(7, 68, 236, 0.8);
+    }
 
-    
 }
-.blue {
-    background-color: blue;
-    display: inline-block;
-    border: none;
-    color: #FFFFF0;
-    text-inline: center;
-    text-decoration: none;
-    outline: none;
-    margin: 0px 75px 0px 0px;
-    padding: 15px 25px;
-    font-size: 24px;
-    border: 5px solid #555555;
+#start:hover {
+    background-color: rgb(255, 47, 47);
+}
+#start:active {
+    background-color: rgb(80, 248, 80);
+    box-shadow: 0 10px rgb(34, 62, 139);
+    transform: translateY(4px)
+}
+#scoreboard {
+    display: grid;
+    grid-template-rows: 15px 125px 100px 325px 10px 50px;
+    grid-template-columns: 200px 200px 200px;
+}
+#top {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+}
+#top-grid {
+    display: grid;
+    grid-template-rows: 50px 10px 50px;
+    grid-template-columns: 150px 10px 150px 10px 150px;
+    text-align: center;
+}
+
+#score-box {
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+#score-grid {
+    display: grid;
+    grid-template-rows: 45px 45px;
+    grid-template-columns: 100px;
+    text-align: center;
+}
+#score-total { 
     border-radius: 40%;
-    animation-name: test;
+    border: 2px solid #f1f3f1;
+    background: red;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    cursor: none;
+
+}
+#score-counter {
+    border-radius: 40%;
+    border: 2px solid #f1f3f1;
+    background: red;
+    border-top: 0px;
+    color: black;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    cursor: none;
+  }
+#high-box {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    text-align: center;
+    display: flex;
+    text-justify: center;
+
+}
+#high-grid {
+    display: grid;
+    grid-template-rows: 45px 45px;
+    grid-template-columns: 100px;
+    text-align: center;
+}
+#high-score {
+    border-radius: 40%;
+    border: 2px solid #f1f3f1;
+    background: red;
+    grid-row: -1 / span -2;
+    grid-column: 1 / span -2;
+    cursor: none;
+}
+#game-board {
+    background: black;
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 3;
+    display: flex;
+    justify-content: center;
+    margin: auto 22%;
+  }
+  #game-grid {
+    display: grid;
+    grid-template-rows: 5px 125px 50px 125px 5px;
+    grid-template-columns: 125px 75px 125px;
+    text-align: center;
+  }
+  #simon {
+    color: white;
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+    border-radius: 40%;
+    border: 2px solid #f1f3f1;
+    box-shadow: 5px 9px 9px rgb(216, 240, 0);
+    cursor: none;
+    animation-name: simonColorLoop;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+@keyframes simonColorLoop {
+    0% {
+        background: rbga(62, 221, 75, 0.8);
+    }
+    25% {
+        background:  rgba(221, 75, 62, 0.8);
+    }
+    50% {
+        background: rgba(255, 234, 55, 0.8);
+    }
+    100% {
+        background: rgba(7, 68, 236, 0.8);
+    }
+
+}
+
+  #green {
+    border: 2px solid rgb(62, 221, 75);
+    background: rgba(62, 221, 75, 0.8);
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    border-radius: 40%;
+    border: 5px solid #f1f3ec;
+    box-shadow: 0 9px rgb(12, 196, 12);
+    cursor: pointer;
+    animation-name: press;
     animation-duration: 4s;
     animation-iteration-count: 5;
-    cursor: pointer;
-    box-shadow: 0 9px #999;
-    
-}
-    
-.green {
-    background-color: green;
-    display: inline-block;
-    border: none;
-    color: #FFFFF0;
-    text-inline: center;
-    text-decoration: none;
-    outline: none;
-    margin: 0px 75px 0px 0px;
-    padding: 15px 25px;
-    font-size: 24px;
-    border: 5px solid #555555;
+  }
+
+  #green:hover {
+      background-color: greenyellow;
+  }
+  #green:active {
+      background-color: forestgreen;
+      box-shadow: 0 10px forestgreen;
+      transform: translateY(4px)
+  }
+  #red {
+    border: 2px solid rgb(221, 75, 62);
+    background: rgba(221, 75, 62, 0.8);
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
     border-radius: 40%;
-    animation-name: test;
-    animation-duration: 4s;
-    animation-iteration-count: 5;
+    border: 5px solid #f1f3ec;
+    box-shadow: 0 9px #c92121;
     cursor: pointer;
-    box-shadow: 0 9px #999;
+    
+  }
+  #red:hover {
+    background-color: rgb(255, 0, 21);
 }
-.yellow {
-    background-color: yellow;
-    display: inline-block;
-    border: none;
-    color: #FFFFF0;
-    text-inline: center;
-    text-decoration: none;
-    outline: none;
-    margin: 0px 75px 0px 0px;
-    padding: 15px 25px;
-    font-size: 24px;
-    border: 5px solid #555555;
+#red:active {
+    background-color: rgb(194, 53, 53);
+    box-shadow: 0 10px rgb(194, 53, 53);
+    transform: translateY(4px);
+}
+  
+  #yellow {
+    border: 2px solid rgb(255, 234, 55);
+    background: rgba(255, 234, 55, 0.8);
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
     border-radius: 40%;
-    animation-name: test;
-    animation-duration: 4s;
-    animation-iteration-count: 5;
+    border: 5px solid #f1f3ec;
+    box-shadow: 0 9px rgb(212, 224, 34);
     cursor: pointer;
-    box-shadow: 0 9px #999;
+  }
+  #yellow:hover {
+    background-color: rgb(224, 255, 47);
+}
+#yellow:active {
+    background-color: goldenrod;
+    box-shadow: 0 10px goldenrod;
+    transform: translateY(4px)
+}
+  #blue {
+    border: 2px solid rgb(105, 192, 250);
+    background: rgba(7, 68, 236, 0.8);
+    grid-row: 4 / span 1;
+    grid-column: 3 / span 1;
+    border-radius: 40%;
+    border: 5px solid #f1f3ec;
+    box-shadow: 0 9px rgb(82, 143, 223);
+    cursor: pointer;
+  }
+  #blue:hover {
+    background-color: rgb(68, 85, 230);
+}
+#blue:active {
+    background-color: rgb(34, 53, 139);
+    box-shadow: 0 10px rbg(34, 53, 139);
+    transform: translateY(4px)
+}
+@media only screen and (max-width: 600px) {
+    header {
+    font-size: 18px;
+    }
+#top-grid {
+    grid-template-columns: 125px 10px 125px 10px 125px;
+    }
 }
