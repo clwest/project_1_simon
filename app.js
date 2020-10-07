@@ -2,10 +2,14 @@ console.log("sanity check")
 
 //Basic game operations
 
+
+
+const newGame = 0
 let score = 0
 let colorArrary = ["blue", "green", "yellow", "red"]
 let currentGame = []
 let player = []
+let scoreCounter = document.getElementById("score-counter")
 const greenButton = document.getElementById("green").addEventListener("click", function(){
     console.log("I Clicked the green button")
 })
@@ -21,3 +25,7 @@ const yellowButton = document.getElementById("yellow").addEventListener("click",
 const startButton = document.getElementById("start").addEventListener("click", function(){
     console.log("Let the games begin")
 })
+
+for (let i = 0; i < colorArrary.length; i++){
+    console.log(colorArrary[i])
+}
