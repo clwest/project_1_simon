@@ -8,7 +8,7 @@ let colorArrary = ["blue", "green", "yellow", "red"]
 let currentGame = []
 let player = []
 let playerChoice = 0
-let simonChoice = 0
+let simon = 0
 let scoreCounter = document.getElementById("score-counter")
 const greenButton = document.getElementById("green").addEventListener("click", function(){
     console.log("I Clicked the green button")
@@ -24,9 +24,22 @@ const yellowButton = document.getElementById("yellow").addEventListener("click",
 })
 const startButton = document.getElementById("start").addEventListener("click", function(){
     console.log("Let the games begin")
+    simon()
 })
 
-newGame = () => {
+simon = () => {
+    for (let i = 0; i < turn; i ++){
+        simonChoice = Math.floor(Math.random() * 4)
+        const color = colorArrary[simonChoice]
+        document.querySelector(`#${color}`).style.backgroundColor = hoverColors[simonChoice]
+        console.log(color)
+        //set reset time out here
+    }
+}
+let hoverColors = ["rgb(68, 85, 230)", "greenyellow", "rgb(224, 255, 47)", "rgb(255, 0, 21)"]
+//array of default colors same as above
+let turn = 1
+game = () => {
     for (let i = 0; i < colorArrary.length; i++){
         if (playerChoice[i] === "red" && simonChoice[i] === "red"){
             console.log("congrats on to the next one")
