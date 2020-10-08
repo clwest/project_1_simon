@@ -37,7 +37,7 @@ simon = () => {
     }
 }
 let hoverColors = ["rgb(68, 85, 230)", "greenyellow", "rgb(224, 255, 47)", "rgb(255, 0, 21)"]
-//array of default colors same as above
+let startColors = ["rgba(7, 68, 236, 0.8)", "rgba(62, 221, 75, 0.8)", "rgba(255, 234, 55, 0.8)", "rgba(221, 75, 62, 0.8)"]
 let turn = 1
 game = () => {
     for (let i = 0; i < colorArrary.length; i++){
