@@ -39,7 +39,9 @@ simon = () => {
         document.querySelector(`#${color}`).style.backgroundColor = hoverColors[simonChoice]
         console.log(color)
         //set reset time out here
-        setTimeout(function () {}, 2000)
+        setTimeout(function () {
+        document.querySelector(`#${color}`).style.backgroundColor = startColors[simonChoice]
+        }, 2000)
     }
 }
 let hoverColors = ["rgb(68, 85, 230)", "greenyellow", "rgb(224, 255, 47)", "rgb(255, 0, 21)"]
