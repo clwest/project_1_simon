@@ -11,18 +11,23 @@ let playerChoice = 0
 let simon = 0
 let scoreCounter = document.getElementById("score-counter")
 const greenButton = document.getElementById("green").addEventListener("click", function(){
+    //
     console.log("I Clicked the green button")
 })
 const redButton = document.getElementById("red").addEventListener("click", function(){
+    setTimeout(function () {}, 2000)
     console.log("I clicked the red button")
 })
 const blueButton = document.getElementById("blue").addEventListener("click", function(){
+    setTimeout(function () {}, 2000)
     console.log("I clicked the blue button")
 })
 const yellowButton = document.getElementById("yellow").addEventListener("click", function(){
+    setTimeout(function () {}, 2000)
     console.log("I clicked the yellow button")
 })
 const startButton = document.getElementById("start").addEventListener("click", function(){
+    setTimeout(function () {}, 2000)
     console.log("Let the games begin")
     simon()
 })
@@ -34,6 +39,7 @@ simon = () => {
         document.querySelector(`#${color}`).style.backgroundColor = hoverColors[simonChoice]
         console.log(color)
         //set reset time out here
+        setTimeout(function () {}, 2000)
     }
 }
 let hoverColors = ["rgb(68, 85, 230)", "greenyellow", "rgb(224, 255, 47)", "rgb(255, 0, 21)"]

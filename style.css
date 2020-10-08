@@ -140,14 +140,14 @@ main {
     display: flex;
     justify-content: center;
     margin: auto 22%;
-  }
-  #game-grid {
+}
+#game-grid {
     display: grid;
     grid-template-rows: 5px 125px 50px 125px 5px;
     grid-template-columns: 125px 75px 125px;
     text-align: center;
-  }
-  #simon {
+}
+#simon {
     color: white;
     grid-row: 3 / span 1;
     grid-column: 2 / span 1;
@@ -159,7 +159,7 @@ main {
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-  }
+}
 @keyframes simonColorLoop {
     0% {
         background: rbga(62, 221, 75, 0.8);
@@ -176,7 +176,7 @@ main {
 
 }
 
-  #green {
+#green {
     border: 2px solid rgb(62, 221, 75);
     background: rgba(62, 221, 75, 0.8);
     grid-row: 2 / span 1;
@@ -188,17 +188,19 @@ main {
     animation-name: press;
     animation-duration: 4s;
     animation-iteration-count: 5;
-  }
-
-  #green:hover {
-      background-color: greenyellow;
-  }
-  #green:active {
-      background-color: forestgreen;
-      box-shadow: 0 10px forestgreen;
-      transform: translateY(4px)
-  }
-  #red {
+}
+.special-green {
+    background-color: greenyellow;
+}
+#green:hover {
+    background-color: greenyellow;
+}
+#green:active {
+    background-color: forestgreen;
+    box-shadow: 0 10px forestgreen;
+    transform: translateY(4px)
+}
+#red {
     border: 2px solid rgb(221, 75, 62);
     background: rgba(221, 75, 62, 0.8);
     grid-row: 2 / span 1;
@@ -208,8 +210,8 @@ main {
     box-shadow: 0 9px #c92121;
     cursor: pointer;
     
-  }
-  #red:hover {
+}
+#red:hover {
     background-color: rgb(255, 0, 21);
 }
 #red:active {
@@ -217,8 +219,8 @@ main {
     box-shadow: 0 10px rgb(194, 53, 53);
     transform: translateY(4px);
 }
-  
-  #yellow {
+
+#yellow {
     border: 2px solid rgb(255, 234, 55);
     background: rgba(255, 234, 55, 0.8);
     grid-row: 4 / span 1;
@@ -227,8 +229,8 @@ main {
     border: 5px solid #f1f3ec;
     box-shadow: 0 9px rgb(212, 224, 34);
     cursor: pointer;
-  }
-  #yellow:hover {
+}
+#yellow:hover {
     background-color: rgb(224, 255, 47);
 }
 #yellow:active {
@@ -236,7 +238,7 @@ main {
     box-shadow: 0 10px goldenrod;
     transform: translateY(4px)
 }
-  #blue {
+#blue {
     border: 2px solid rgb(105, 192, 250);
     background: rgba(7, 68, 236, 0.8);
     grid-row: 4 / span 1;
@@ -245,8 +247,8 @@ main {
     border: 5px solid #f1f3ec;
     box-shadow: 0 9px rgb(82, 143, 223);
     cursor: pointer;
-  }
-  #blue:hover {
+}
+#blue:hover {
     background-color: rgb(68, 85, 230);
 }
 #blue:active {
