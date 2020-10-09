@@ -9,13 +9,25 @@ let winning;
 let win;
 let ready = false
 let simon;
+let startGame = false
 let intervalId;
-
-
 let scoreCounter = document.getElementById("score-counter")
 
+const simonStart = document.getElementById("simon").addEventListener("click", function() {
+    if (simonStart.click === true) {
+        startGame = true
+        scoreCounter.innerHTML = 0
+    }else 
+    startGame = false
+    scoreCounter.innerHTML = ""
+    clearColor()
+    clearInterval(intervalId)
+})
 
 const startButton = document.getElementById("start").addEventListener("click", function(){
+    if (startGame || win) {
+        player()
+    }
     player()
 })
 
@@ -29,7 +41,7 @@ player = () => {
     scoreCounter.innerHTML = 0
     win = false
     playerSelect = true
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10; i++) {
         currentGame.push(Math.floor(Math.random() * 4) + 1)
     }
     simon = true
