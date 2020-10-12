@@ -34,7 +34,8 @@ setupGame = () => {
     intervalId = 0
     scoreNumber.innerHTML = '0'
     playerSelect = true
-    for (let i = 0; i < 10; i++) {
+    //changed this to 11 instead of 10 to be able to stop at 10
+    for (let i = 0; i < 11; i++) {
         currentGame.push(Math.floor(Math.random() * 4) + 1)
     }
     simon = true
@@ -45,7 +46,6 @@ setupGame = () => {
 game = () => {
     if (simon) {
         clearColor()
-
         allColorFlashRef = setInterval(() => {
             if (allColorFlash === 1) blueFlash()
             if (allColorFlash === 2) greenFlash()
@@ -116,7 +116,9 @@ clearColor = () => {
 
 playerWin = () => {
     // if player was wrong
-    if ([playerChoice.length - 1] !== currentGame[playerChoice.length -1]) {
+    // if I switch from !== to === it will kind of work but not really
+    // as intended so I could go to work for Blizzard!
+    if ([playerChoice.length - 1] === currentGame[playerChoice.length - 1]) {
         playerChoice = []
         console.log("check here", playerChoice)
         winning = false
@@ -128,19 +130,26 @@ playerWin = () => {
 
     scoreNumber.innerHTML = turn
 
+       // flashes the next turn
+       setTimeout(() => {
+        turn++
+        flashTurn()
+        winning = true
+    }, 1000)
+
     if(playerChoice.length === 10 && winning === true) {
         winGame()
         return
     }
 
     // flashes the next turn
-    setTimeout(() => {
+   /* setTimeout(() => {
         turn++
         flashTurn()
         winning = true
     }, 1000)
+    */
 }
-
 
 
 blueButton.addEventListener("click", function() {
