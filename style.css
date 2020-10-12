@@ -134,7 +134,7 @@ main {
     border-radius: 40%;
     border: 2px solid #f1f3f1;
     box-shadow: 5px 9px 9px rgb(216, 240, 0);
-    cursor: pointer;
+    cursor: none;
     animation-name: simonColorLoop;
     animation-duration: 5s;
     animation-iteration-count: infinite;
